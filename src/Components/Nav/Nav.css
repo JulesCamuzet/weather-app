@@ -1,0 +1,61 @@
+@import url(./../../fonts.css);
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 100vh;
+  align-items: center;
+}
+
+.nav-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-logo {
+  width: 100px;
+  padding: 50px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.nav-link {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-link.active * {
+  stroke: blue;
+  color: blue;
+}
+
+.nav-link svg {
+  width: 25px;
+  stroke: gray;
+}
+
+.nav-link span {
+  font-family: mainfont;
+  color: gray;
+  font-size: 20px;
+}
+
+
+.nav-bottom {
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
