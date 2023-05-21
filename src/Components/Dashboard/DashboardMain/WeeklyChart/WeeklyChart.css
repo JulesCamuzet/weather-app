@@ -1,0 +1,8 @@
+.db-weekly-chart {
+  width: 100%;
+  height: 100px;
+  background-color: lightcyan;
+  margin-top: 50px;
+  flex-grow: 1;
+  border-radius: 20px;
+}

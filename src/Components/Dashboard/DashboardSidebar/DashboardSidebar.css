@@ -1,0 +1,19 @@
+.dashboard-sidebar {
+  width: 600px;
+  height: 100vh;
+  background-color: darkslategray;
+  box-sizing: border-box;
+  padding: 30px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(28,115,104);
+  background: linear-gradient(328deg, rgba(28,115,104,1) 56%, rgba(121,222,202,1) 100%);
+}
+
+
+.sidebar-title {
+  font-family: mainfont;
+  color: white;
+  font-size:1.5rem;
+}

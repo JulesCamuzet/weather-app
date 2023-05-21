@@ -1,0 +1,45 @@
+.sunrise-sunset {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  grid-area: 20px;
+  gap: 10px;
+}
+
+.sunrise-sunset .sidebar-title {
+  margin-bottom: 10px;
+}
+
+.sunrise-sunset-item {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  gap: 50px;
+  border-radius: 20px;
+  border: solid white 1px;
+}
+
+.sunrise-sunset-item svg {
+  width: 50px;
+  stroke: white;
+}
+
+.sunrise-sunset-item-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.sunrise-sunset-item-title{
+  color: lightcyan;
+  font-size: 1rem;
+  font-family: mainfont;
+}
+
+.sunrise-sunset-item-value {
+  color: white;
+  font-size: 2rem;
+  font-family: mainfont;
+}
