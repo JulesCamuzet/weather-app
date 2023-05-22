@@ -1,15 +1,20 @@
 import "./MainInformations.css";
+import DataContext from "../../../../contexts/DataContext";
+import { useContext, useEffect, useState } from "react";
+
 
 const MainInformations = () => {
+  const data = useContext(DataContext);
   return (
     <div className="main-informations">
       <div className="main-informations-sub">
-        <span className="location">Toulouse, France</span>
-        <span className="hour">09:00 AM</span>
+        <span className="location">
+          {data.location.name}, {data.location.country}
+        </span>
       </div>
       <div className="main-informations-sub">
-        <span className="temperature">20°C</span>
-        <span className="weather-description">Dramatic Cloudy</span>
+        <span className="temperature">{data.current.temp_c}° C</span>
+        <span className="weather-description">{data.current.condition.text}</span>
       </div>
     </div>
   );

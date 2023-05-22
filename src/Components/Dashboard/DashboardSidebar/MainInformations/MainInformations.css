@@ -21,17 +21,10 @@
   font-size: 2rem;
 }
 
-.hour {
-  color: white;
-  font-family: mainfont;
-  font-weight: 100;
-  font-size: 2rem;
-  text-align: right;
-}
 
 .temperature {
   color: white;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 .weather-description {

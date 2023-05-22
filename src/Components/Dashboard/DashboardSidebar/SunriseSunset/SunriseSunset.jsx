@@ -1,6 +1,9 @@
 import "./SunriseSunset.css";
+import DataContext from "../../../../contexts/DataContext";
+import { useContext } from "react";
 
 const SunriseSunset = () => {
+  const data = useContext(DataContext);
   return (
     <div className="sunrise-sunset">
       <span className="sidebar-title">Sunrise & Sunset</span>
@@ -21,7 +24,7 @@ const SunriseSunset = () => {
         </svg>
         <div className="sunrise-sunset-item-right">
           <span className="sunrise-sunset-item-title">Sunrise</span>
-          <span className="sunrise-sunset-item-value">4:20 AM</span>
+          <span className="sunrise-sunset-item-value">{data.forecast.forecastday[0].astro.sunrise}</span>
         </div>
       </div>
       <div className="sunrise-sunset-item">
@@ -42,7 +45,7 @@ const SunriseSunset = () => {
 
         <div className="sunrise-sunset-item-right">
           <span className="sunrise-sunset-item-title">Sunset</span>
-          <span className="sunrise-sunset-item-value">5:50 PM</span>
+          <span className="sunrise-sunset-item-value">{data.forecast.forecastday[0].astro.sunset}</span>
         </div>
       </div>
     </div>

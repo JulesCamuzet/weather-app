@@ -1,8 +1,14 @@
 import "./DashboardMain.css";
 import OverviewGridItem from "./OverviewGridItem/OverviewGridItem";
 import WeeklyChart from "./WeeklyChart/WeeklyChart";
+import DataContext from "../../../contexts/DataContext";
+import { useContext } from "react";
 
 const DashboardMain = () => {
+
+  const data = useContext(DataContext);
+  console.log(data);
+
   let OverviewGridItemData = [
     {
       icon: (
@@ -22,7 +28,7 @@ const DashboardMain = () => {
         </svg>
       ),
       title: "Wind Speed",
-      data: "12km/h",
+      data: `${data.current.wind_kph} km/h`,
     },
     {
       icon: (
@@ -41,8 +47,8 @@ const DashboardMain = () => {
           />
         </svg>
       ),
-      title: "Rain Chanse",
-      data: "24%",
+      title: "Humidity",
+      data: `${data.current.humidity}%`,
     },
     {
       icon: (
@@ -62,7 +68,7 @@ const DashboardMain = () => {
         </svg>
       ),
       title: "Presure",
-      data: "720 hpa",
+      data: `${data.current.pressure_mb}mb`,
     },
     {
       icon: (
@@ -82,14 +88,17 @@ const DashboardMain = () => {
         </svg>
       ),
       title: "Uv Index",
-      data: "2.3",
+      data: data.current.uv,
     },
   ];
+
+  const date = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
     <div className="db-main">
       <div className="db-main-header">
-        <span className="db-main-date">Month day YEAR</span>
+        <span className="db-main-date">{date.toLocaleDateString("en-US", options)}</span>
         <div className="db-main-search-container">
           <svg
             xmlns="http://www.w3.org/2000/svg"
